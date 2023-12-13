@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Luv2ShopFormService } from 'src/app/services/luv2-shop-form.service';
 import { Country } from 'src/app/common/country';
 import { State } from 'src/app/common/state';
@@ -40,7 +40,7 @@ export class CheckoutComponent implements OnInit {
                                Validators.minLength(2), 
                                Luv2ShopValidators.notOnlyWhitespace]),
                                
-        email: new FormControl(theEmail,
+        email: new FormControl('',
                               [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')])
       }),
       shippingAddress: this.formBuilder.group({
