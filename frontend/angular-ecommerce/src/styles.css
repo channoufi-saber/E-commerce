@@ -1,3 +1,4 @@
+/* You can add global styles to this file, and also import other style files */
 /* 
  * ----------------------------
  * Common CSS
@@ -210,11 +211,11 @@ section{
 }
 
 .section-content-p30{
-    padding:0 30px
+    padding:0 20px
 }
 
 .au-input-xl{
-    min-width:935px
+    min-width:500px
 }
 
 input.au-input.au-input-xl{
