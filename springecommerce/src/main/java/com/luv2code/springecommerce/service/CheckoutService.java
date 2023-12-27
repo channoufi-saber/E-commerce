@@ -4,8 +4,11 @@
  */
 package com.luv2code.springecommerce.service;
 
+import com.luv2code.springecommerce.dto.PaymentInfo;
 import com.luv2code.springecommerce.dto.Purchase;
 import com.luv2code.springecommerce.dto.PurchaseResponse;
+import com.stripe.exception.StripeException;
+import com.stripe.model.PaymentIntent;
 
 /**
  *
@@ -13,4 +16,5 @@ import com.luv2code.springecommerce.dto.PurchaseResponse;
  */
 public interface CheckoutService {
     PurchaseResponse placeOrder(Purchase purchase);
+    PaymentIntent createPaymentIntent(PaymentInfo paymentInfo) throws StripeException;
 }
